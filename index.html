@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PBO-Beleg</title>
 
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue"></script>
+    
+    <!-- Bootstrap-Bibos -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -15,52 +19,42 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
+    <!-- andere Bibliotheken -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
     <body>
-        <div class="container">
-            <header> 
-                <h1>
-                    <p class="font-weight-bold text-danger">
-                        <center>
-                            Programmierung von Benutzeroberflächen
-                        </center>
-                    </p>
-                </h1> 
-            </header>
-            <div class="row">
-                <p class="col">
-                    <a>
-                        Beispiel 1
-                    </a>
-                </p>
-                <p class="col">
-                    <a>
-                        Beispiel 2
-                    </a>
-                </p>
-                <p class="col">
-                    <a>
-                        Beispiel 3
-                    </a>
-                </p>
-                <p class="col">
-                    <a>
-                        Beispiel 4
-                    </a>
-                </p>
+        <div id="site">
+            <!-- Header -->
+            <div>
+                <div data-role="header" data-position="fixed" data-theme="b">
+                    <h1>PBO-Beleg</h1>
+                </div>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="Kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
             </div>
-            <footer class="footer" id="contact">
-                <div>
-                    <div>
-                        <div>
-                            <center>
-                                <h4>Kontakt</h4>
-                            </center>
-                        </div>
-                    </div>
-                </div>    
-             </footer>    
+            
+            <div class="container">
+                <p>Hier werden die Daten gezeigt</p>
+            </div>
+
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <h2>Kontakt</h2>
+                <p>Email: {{json_data.system.email}}</p>
+                <p>Firma: {{json_data.system.contact}}</p>
+                <p>Website: {{json_data.system.website}}</p>   
+            </div>
+
+
         </div>
+        <!-- Scripte -->
         <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     </body>
 </html>
