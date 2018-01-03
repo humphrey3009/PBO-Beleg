@@ -1,20 +1,42 @@
-function loadJSON(callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'process.json', true);
-    xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == "200") {
-    // .open will NOT return a value but simply returns
-    //undefined in async mode so use a callback
-    
-    callback(xobj.responseText);
+/* JAVA */
+function Count(myObject) 
+{
+    return Object.keys(myObject).length;
+}
+
+/* VUE */
+new Vue(
+{
+    el: '#site',
+    data:{
+        childnum:0,
+        locatnum:0,
+        stakenum:0,
+        state: false,
+        processdata:{system:[], process:[]},
+        tmpprocess:{}
+    },
+    mounted(){
+        var item = this;
+        $.getJSON("../source/process.json",function(data){
+            item.processdata = data;
+            item.tmpprocess = item.processdata.process.childs;
+            item.childnum = Count(item.processdata.process.childs);
+            item.locatnum = Count(item.processdata.process.locations);
+            item.stakenum = Count(item.processdata.process.stakeholder);
+        });
+    },
+    methods: {
+        expand: function(id){
+            var x = document.getElementById(id);
+            if (x.style.display === "block"){
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        
     }
-    }
-    xobj.send(null);
-    }
-    // Call to function with anonymous callback
-    loadJSON(function (response) {
-    var myJSON = JSON.parse(response);
-    console.log(myJSON);
-    });
-    
+
+}); 

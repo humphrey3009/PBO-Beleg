@@ -31,29 +31,78 @@
                 <div data-role="header" data-position="fixed" data-theme="b">
                     <h1>PBO-Beleg</h1>
                 </div>
-                <div data-role="navbar">
+                <!--<div data-role="navbar">
                     <ul>
-                        <li><a href="Kontakt">Kontakt</a></li>
+                        <li><a href="#Kontakt">Kontakt</a></li>
                     </ul>
+                </div>-->
+            </div>
+            <!-- Content -->
+            <div class="container">
+                <div v-for="(item, i) in tmpprocess">
+                    <div class="panel panel-default" id="item.id">
+                        <div class="panel-heading">
+                            <h5>{{item.name}}</h5>
+                        </div>
+                        <div class="panel-body">
+                            <h5>Beschreibung:</h5>
+                            <p>{{item.description}}</p>
+                            <h5>Informationen:</h5>
+                            <table>
+                                <tr>
+                                    <td>Ort:</td>
+                                    <td>Ortsname</td>
+                                </tr>
+                                <tr>
+                                    <td>Initiator:</td>
+                                    <td>Initiatorname</td>
+                                </tr>
+                                <tr>
+                                    <td>Zeitraum:</td>
+                                    <td>Zeitspanne</td>
+                                </tr>
+                                <tr>
+                                    <td>Teilnehmer:</td>
+                                    <td>bla bla</td>
+                                </tr>
+                                <tr>
+                                    <td>Status:</td>
+                                    <td>state</td>
+                                </tr>
+                            </table>
+                            <br>
+                            <h5>Verbindungen</h5>
+                            <table>
+                                <tr>
+                                    <td>Übergeordnet</td>
+                                    <td>Untergeordnet</td>
+                                </tr>
+                                <tr>
+                                    <td>Eltern</td>
+                                    <td>Kinder</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             
-            <div class="container">
-                <p>Hier werden die Daten gezeigt</p>
-            </div>
 
             <!-- footer -->
-            <div data-role="footer" data-position="fixed" data-theme="b">
-                <h2>Kontakt</h2>
-                <p>Email: {{json_data.system.email}}</p>
-                <p>Firma: {{json_data.system.contact}}</p>
-                <p>Website: {{json_data.system.website}}</p>   
+            <div data-role="footer" data-position="fixed" data-theme="b" id="Kontakt">
+                <h2>Kontakt</h2>               
+                <table > <tr> 
+                    <td><p>Email: {{processdata.system.email}}</p></td>
+                    <td><p>Firma: {{processdata.system.contact}}</p></td> 
+                    <td><p>Website: {{processdata.system.website}}</p></td>
+                </tr> </table>   
             </div>
 
 
         </div>
         <!-- Scripte -->
-        <script src="script.js"></script>
+        <script src="script/script.js"></script>  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     </body>
