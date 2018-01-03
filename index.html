@@ -42,7 +42,7 @@
                 <div v-for="(item, i) in tmpprocess">
                     <div class="panel panel-default" id="item.id">
                         <div class="panel-heading">
-                            <h5>{{item.name}}</h5>
+                            <h4>{{item.name}}</h4>
                         </div>
                         <div class="panel-body">
                             <h5>Beschreibung:</h5>
@@ -51,23 +51,23 @@
                             <table>
                                 <tr>
                                     <td>Ort:</td>
-                                    <td>Ortsname</td>
+                                    <td>{{GetLocation(item.location)}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Initiator:</td>
-                                    <td>Initiatorname</td>
+                                    <td>Interressengruppe:</td>
+                                    <td>{{GetStakeholder(item.initiator)}}</td>
                                 </tr>
                                 <tr>
                                     <td>Zeitraum:</td>
-                                    <td>Zeitspanne</td>
+                                    <td>{{ConvertTime(item.start)}} bis {{ConvertTime(item.end)}}</td>
                                 </tr>
                                 <tr>
                                     <td>Teilnehmer:</td>
-                                    <td>bla bla</td>
+                                    <td>{{GetMembers(item.participants)}} </td>
                                 </tr>
                                 <tr>
                                     <td>Status:</td>
-                                    <td>state</td>
+                                    <td>{{item.participation}} </td>
                                 </tr>
                             </table>
                             <br>
