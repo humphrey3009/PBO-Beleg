@@ -10,9 +10,9 @@ new Vue(
     el: '#site',
     data:{
         //Für Statistiken kommt noch raus vermutlich
-        childnum:0,
-        locatnum:0,
-        stakenum:0,
+        //childnum:0,
+        //locatnum:0,
+        //stakenum:0,
         state: false,
         //Daten
         processdata:{system:[], process:[]},
@@ -23,9 +23,9 @@ new Vue(
         $.getJSON("../source/process.json",function(data){
             item.processdata = data;
             item.tmpprocess = item.processdata.process.childs;
-            item.childnum = Count(item.processdata.process.childs);
-            item.locatnum = Count(item.processdata.process.locations);
-            item.stakenum = Count(item.processdata.process.stakeholder);
+            //item.childnum = Count(item.processdata.process.childs);
+            //item.locatnum = Count(item.processdata.process.locations);
+            //item.stakenum = Count(item.processdata.process.stakeholder);
         });
     },
     methods: {

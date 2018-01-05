@@ -18,18 +18,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
     <!-- andere Bibliotheken -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="styles/style.css" rel="stylesheet">
 </head>
     <body>
         <div id="site">
             <!-- Header -->
             <div>
                 <div data-role="header" data-position="fixed" data-theme="b">
-                    <h1>PBO-Beleg</h1>
+                    <h1>PBO-Beleg: Jan Brose</h1>
                 </div>
                 <!--<div data-role="navbar">
                     <ul>
@@ -38,65 +38,55 @@
                 </div>-->
             </div>
             <!-- Content -->
-            <div class="container">
-                <div v-for="(item, i) in tmpprocess">
-                    <div class="panel panel-default" id="item.id">
-                        <div class="panel-heading">
-                            <h4>{{item.name}}</h4>
-                        </div>
-                        <div class="panel-body">
-                            <h5>Beschreibung:</h5>
-                            <p>{{item.description}}</p>
-                            <h5>Informationen:</h5>
-                            <table>
-                                <tr>
-                                    <td>Ort:</td>
-                                    <td>{{GetLocation(item.location)}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Interressengruppe:</td>
-                                    <td>{{GetStakeholder(item.initiator)}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Zeitraum:</td>
-                                    <td>{{ConvertTime(item.start)}} bis {{ConvertTime(item.end)}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Teilnehmer:</td>
-                                    <td>{{GetMembers(item.participants)}} </td>
-                                </tr>
-                                <tr>
-                                    <td>Status:</td>
-                                    <td>{{item.participation}} </td>
-                                </tr>
-                            </table>
-                            <br>
-                            <h5>Verbindungen</h5>
-                            <table>
-                                <tr>
-                                    <td>Übergeordnet</td>
-                                    <td>Untergeordnet</td>
-                                </tr>
-                                <tr>
-                                    <td>Eltern</td>
-                                    <td>Kinder</td>
-                                </tr>
-                            </table>
+            <!--<div class="container">-->
+                <div class="row">
+
+                    <!-- Linke Sidebar -->
+                    <div class="col-lg-2 pull-left">
+                        <h4>Orte</h4>
+                            <ul>
+                                <div v-for="item_0 in processdata.process.locations">
+                                    <li><a>{{item_0.city}}</a></li>   
+                                </div>
+                            </ul>
+                        <h4>Personen</h4>
+                            <ul>
+                                <div v-for="item_0 in processdata.process.stakeholder">
+                                    <li><a>{{item_0.name}}</a></li>   
+                                </div>
+                            </ul>
+                    </div>
+
+                    <!-- Inhalt --> 
+                    <div  class="col-lg-10 pull-right">
+                        <div v-for="(item, i) in tmpprocess">
+                            <!-- Collapsibles -->
+                            <div data-role="collapsible">
+                                <h1>{{item.name}}</h1>
+                                <h5>Beschreibung</h5>
+                                <p>{{item.description}}</p>
+                                <h5>Informationen</h5>
+                                <p>Ort: {{GetLocation(item.location)}}</p>
+                                <p>Interressengruppe: {{GetStakeholder(item.initiator)}}</p>
+                                <p>Zeitraum: {{ConvertTime(item.start)}} bis {{ConvertTime(item.end)}}</p>
+                                <p>Teilnehmer: {{GetMembers(item.participants)}}</p>
+                                <p>Status: {{item.participation}}</p>
+                                <p>Übergeordnete Elemente: {{GetConnections(item.connection.from)}}</p>
+                                <p>Untergeordnet Elemente: {{GetConnections(item.connection.to)}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            
+            <!--</div>-->
 
             <!-- footer -->
-            <div data-role="footer" data-position="fixed" data-theme="b" id="Kontakt">
-                <h2>Kontakt</h2>               
-                <table > <tr> 
-                    <td><p>Email: {{processdata.system.email}}</p></td>
-                    <td><p>Firma: {{processdata.system.contact}}</p></td> 
-                    <td><p>Website: {{processdata.system.website}}</p></td>
-                </tr> </table>   
+            <div class="footer" data-role="footer" data-position="fixed" data-theme="b" id="Kontakt">
+                <h2 class="h2footer">Kontakt</h2>
+                <div class="row">
+                    <p class="col-lg-4" id="f1">Firma: {{processdata.system.contact}}</p>
+                    <p class="col-lg-4" id="f2">Website: {{processdata.system.website}}</p>               
+                    <p class="col-lg-4" id="f3">Email: {{processdata.system.email}}</p>
+                </div>
             </div>
 
 

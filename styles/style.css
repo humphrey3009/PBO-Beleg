@@ -1,0 +1,25 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+.footer {
+    align-items: center;
+}
+
+.pfooter{
+    text-align: center;
+}
+.h2footer{
+    font-size: 48px;
+}
+
+#f1 {
+    text-align: center;
+}
+#f2 {
+    text-align: center;
+}
+#f3 {
+    text-align: center;
+}
