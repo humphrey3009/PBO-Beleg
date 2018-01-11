@@ -13,7 +13,7 @@ new Vue(
         //childnum:0,
         //locatnum:0,
         //stakenum:0,
-        state: false,
+        //state: false,
         //Daten
         processdata:{system:[], process:[]},
         tmpprocess:{}
@@ -101,7 +101,34 @@ new Vue(
             }
 
             return resp;
+        },
+        // Farbe für Bearbeitungstand vom Collapsible
+        GetColor: function(status){
+            switch(status) {
+                case "closed":
+                    return "rcol";
+                case "partial opened":
+                    return "ocol"
+                case "open":
+                    return "gcol"
+                default: 
+                    return "";
+            } 
+        },
+        // Farbe für Bearbeitungstand im p
+        GetColorp: function(status){
+            switch(status) {
+                case "closed":
+                    return "bg-danger";
+                case "partial opened":
+                    return "bg-warning"
+                case "open":
+                    return "bg-success"
+                default: 
+                    return "";
+            } 
         }        
     }
 
 }); 
+

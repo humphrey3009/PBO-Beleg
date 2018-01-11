@@ -23,3 +23,15 @@ html {
 #f3 {
     text-align: center;
 }
+
+.gcol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
+    background:lightgreen !important;
+}
+
+.rcol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
+    background:red !important;
+}
+
+.ocol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
+    background:orange !important;
+}
