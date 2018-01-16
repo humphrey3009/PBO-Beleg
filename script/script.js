@@ -55,10 +55,11 @@ new Vue(
                 if(id == data[i].id) return data[i].city;
             }
         },
-        //Convert Time
-        ConvertTime: function(time){
+        //Built Time
+        BuiltTime: function(time, time2){
             //console.log(time);
-            if (time == null) return "TBA";
+            //console.log(time2);
+            
             var timearray = time.split("T");
             var day = timearray[0];
             //console.log(day);
@@ -66,8 +67,25 @@ new Vue(
             day = dayn[2] + "." + dayn[1] + "." + dayn[0];
             timearray = timearray[1].split("+");
             var daytime = timearray[0];
-            //console.log(daytime);
-            return day + " " + daytime;
+            var returntext = day + " " + daytime;
+            if (time2.length == 0){
+                //console.log("nur startzeit")
+                return returntext;
+                }
+            timearray = time2.split("T");
+            day = timearray[0];
+            //console.log(day);
+            dayn = day.split("-");
+            day = dayn[2] + "." + dayn[1] + "." + dayn[0];
+            timearray = timearray[1].split("+");
+            daytime = timearray[0];
+
+            returntext += " bis " + day + " " + daytime;
+                
+            //console.log("auch Endzeit");
+            //console.log(time2.length)
+            //console.log("#########################");
+            return returntext;
             //return "test";
         },
         //Get all Members

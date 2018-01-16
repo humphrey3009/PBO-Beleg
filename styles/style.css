@@ -51,3 +51,7 @@ html {
 .ptableheader{
     font-weight: bold !important;
 }
+
+.sidebar{
+    position: fixed;
+}
