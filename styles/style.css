@@ -3,6 +3,9 @@ html {
     min-height: 100%;
   }
 
+#site{
+    background-color: paleturquoise !important;
+}
 .footer {
     align-items: center;
 }
@@ -11,7 +14,10 @@ html {
     text-align: center;
 }
 .h2footer{
-    font-size: 48px;
+    font-size: 150% !important;
+}
+.h1header{
+    font-size: 150% !important;
 }
 
 #f1 {
@@ -25,13 +31,23 @@ html {
 }
 
 .gcol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
-    background:lightgreen !important;
+    background: rgb(9, 161, 9) !important;
+    font-weight: normal !important;
+    color: white !important;
 }
 
 .rcol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
-    background:red !important;
+    background:rgb(194, 10, 10) !important;
+    font-weight: normal !important;
+    color: white !important;
 }
 
 .ocol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
     background:orange !important;
+    font-weight: normal !important;
+    color: white !important;
+}
+
+.ptableheader{
+    font-weight: bold !important;
 }

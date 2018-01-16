@@ -29,7 +29,7 @@
             <!-- Header -->
             <div>
                 <div data-role="header" data-position="fixed" data-theme="b">
-                    <h1>PBO-Beleg: Jan Brose</h1>
+                    <h1 class="h1header">PBO-Beleg: Jan Brose</h1>
                 </div>
                 <!--<div data-role="navbar">
                     <ul>
@@ -43,12 +43,14 @@
 
                     <!-- Linke Sidebar -->
                     <div class="col-lg-2 pull-left">
+                        <br>
                         <h4>Orte</h4>
                             <ul>
                                 <div v-for="item_0 in processdata.process.locations">
                                     <li><a>{{item_0.city}}</a></li>   
                                 </div>
                             </ul>
+                        <br>
                         <h4>Personen</h4>
                             <ul>
                                 <div v-for="item_0 in processdata.process.stakeholder">
@@ -58,7 +60,7 @@
                     </div>
 
                     <!-- Inhalt --> 
-                    <div  class="col-lg-10 pull-right">
+                    <div  class="col-lg-8">
                         <div v-for="(item, i) in tmpprocess">
                             <!-- Collapsibles -->
                             <div data-role="collapsible" v-bind:class="GetColor(item.participation)">
@@ -78,6 +80,35 @@
                             
                             
 
+                        </div>
+                    </div>
+
+                    <!-- Rechter Sidebar -->
+                    <div class="col-lg-2 pull-right">
+                        <br>
+                        <h4>Legende</h4>
+                        <br>
+                        <h5>Farben</h5>
+                        <br>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <td><p class="ptableheader">Farbe:</p></td>
+                                    <td><p class="ptableheader">Bedeutung:</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="bg-danger text-white">Rot</p></td>
+                                    <td><p>closed</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="bg-warning text-white">Orange</p></td>
+                                    <td><p>partical opend</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="bg-success text-white">Grün</p></td>
+                                    <td><p>open</p></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>

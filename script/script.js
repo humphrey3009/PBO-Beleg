@@ -119,11 +119,11 @@ new Vue(
         GetColorp: function(status){
             switch(status) {
                 case "closed":
-                    return "bg-danger";
+                    return "bg-danger text-white";
                 case "partial opened":
-                    return "bg-warning"
+                    return "bg-warning text-white"
                 case "open":
-                    return "bg-success"
+                    return "bg-success text-white"
                 default: 
                     return "";
             } 
