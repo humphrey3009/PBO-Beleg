@@ -39,3 +39,13 @@ Die Bewertung erfolgt hinsichtlich der Strukturierung der Website, deren Gestalt
     * Firmen
     * Studenten
 * maximal 2 bis 3 Verschachttelungstiefe
+
+### Anmerkungen
+* Nicht zu viel umsetzen
+* Veranschaulichen wie man möchte
+* Datei nur so groß das es genug Daten gibt und man genug Flexibilität hat
+
+# Abgabe
+* bis 22.02
+* Belegpräsentation mit ihm einfach ein wenig über das Thema Reden.
+* Git-Hub-Link eintragen und/oder ihm schicken.

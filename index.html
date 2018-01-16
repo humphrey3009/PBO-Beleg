@@ -63,8 +63,19 @@
 
                     <!-- Inhalt --> 
                     <div  class="col-lg-8">
+                        <!-- Sortierleiste -->
+                        <!--<div class="row">
+                            <button class ="col-lg-4" type="button">
+                                <a>Namen</a>
+                            </button>
+                            <button class ="col-lg-4" type="button">
+                                <a>Status</a>
+                            </button>
+                            <button class ="col-lg-4" type="button">
+                                <a>Initiator</a>
+                            </button>    
+                        </div> -->
                         <div v-for="(item, i) in tmpprocess">
-                            
                             <!-- Collapsibles -->
                             <div data-role="collapsible" v-bind:class="GetColor(item.participation)">
                                 <h1>{{item.name}}</h1>
