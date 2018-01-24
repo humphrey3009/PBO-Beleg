@@ -30,19 +30,20 @@ html {
     text-align: center;
 }
 
-.gcol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
+.gcol .ui-collapsible-heading-toggle {
     background: rgb(9, 161, 9) !important;
     font-weight: normal !important;
     color: white !important;
 }
 
-.rcol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
+
+.rcol .ui-collapsible-heading-toggle {
     background:rgb(194, 10, 10) !important;
     font-weight: normal !important;
     color: white !important;
 }
 
-.ocol .ui-collapsible-heading-collapsed > .ui-collapsible-heading-toggle {
+.ocol .ui-collapsible-heading-toggle {
     background:orange !important;
     font-weight: normal !important;
     color: white !important;
