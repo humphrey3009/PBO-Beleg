@@ -46,6 +46,7 @@ Die Bewertung erfolgt hinsichtlich der Strukturierung der Website, deren Gestalt
 * Datei nur so groß das es genug Daten gibt und man genug Flexibilität hat
 
 # Abgabe
+* Beleg von Jan Brose und Timon Fehse
 * bis 22.02
 * Belegpräsentation mit ihm einfach ein wenig über das Thema Reden.
 * Git-Hub-Link eintragen und/oder ihm schicken.
