@@ -31,20 +31,20 @@ html {
 }
 
 .gcol .ui-collapsible-heading-toggle {
-    background: rgb(9, 161, 9) !important;
+    background: #28a745 !important;
     font-weight: normal !important;
     color: white !important;
 }
 
 
 .rcol .ui-collapsible-heading-toggle {
-    background:rgb(194, 10, 10) !important;
+    background:#bc3545 !important;
     font-weight: normal !important;
     color: white !important;
 }
 
 .ocol .ui-collapsible-heading-toggle {
-    background:orange !important;
+    background:#ffc107 !important;
     font-weight: normal !important;
     color: white !important;
 }
@@ -55,4 +55,5 @@ html {
 
 .sidebar{
     position: fixed;
+    margin: 1%;
 }

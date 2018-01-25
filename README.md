@@ -1,4 +1,4 @@
-# Beleg
+# Beleg PBO Jan Brose und Timon Fehse
 
 ## Aufgabe
 Entwickeln sie eine interaktive Webseite als One-Pager. Verwenden sie hierzu eine CSS Bibliothek (wie Bootstrap 4), ein JavaScript-Framework (wie VUE) und mindestens eine weitere selbst gewählte JavaScript-Bibleothek zur Visualisierung von Informationen (wie Popper.JS).
